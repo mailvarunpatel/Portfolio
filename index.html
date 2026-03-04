@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Varun Patel — Product Leader</title>
+<meta name="description" content="Varun Patel — Product Leader with 14+ years in IoT, connectivity platforms, and enterprise SaaS. Patent holder. Based in Germany.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  /* Navy + Gold Executive Palette */
+  --navy-deep: #0a1628;
+  --navy: #0f2140;
+  --navy-mid: #1a3358;
+  --navy-light: #264573;
+  --gold: #c9a84c;
+  --gold-light: #dfc06a;
+  --gold-muted: rgba(201,168,76,0.15);
+  --cream: #f8f6f1;
+  --warm-white: #fdfcf9;
+  --text-dark: #1a1a2e;
+  --text-body: #3d3d56;
+  --text-muted: #6b6b82;
+  --text-light: rgba(248,246,241,0.7);
+  --text-bright: #f8f6f1;
+  --border-light: #e2dfd8;
+  --border-dark: rgba(255,255,255,0.08);
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Source Sans 3', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--sans);
+  color: var(--text-dark);
+  background: var(--cream);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--navy-deep); }
+::-webkit-scrollbar-thumb { background: var(--navy-light); border-radius: 3px; }
+
+/* ─── NAV ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10,22,40,0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-dark);
+  transition: transform 0.3s ease;
+}
+nav .nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+nav .logo {
+  font-family: var(--serif);
+  font-size: 1.4rem; font-weight: 600;
+  color: var(--text-bright);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+nav .logo span { color: var(--gold); }
+nav ul { list-style: none; display: flex; gap: 2rem; }
+nav ul a {
+  text-decoration: none; color: var(--text-light);
+  font-size: 0.82rem; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  transition: color 0.3s;
+  position: relative;
+}
+nav ul a::after {
+  content: ''; position: absolute;
+  bottom: -4px; left: 0; width: 0; height: 1.5px;
+  background: var(--gold); transition: width 0.3s;
+}
+nav ul a:hover { color: var(--gold); }
+nav ul a:hover::after { width: 100%; }
+
+.hamburger {
+  display: none; background: none; border: none; cursor: pointer;
+  width: 28px; height: 20px; position: relative; z-index: 200;
+}
+.hamburger span {
+  display: block; width: 100%; height: 2px;
+  background: var(--text-bright); position: absolute; left: 0;
+  transition: all 0.3s;
+}
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 9px; }
+.hamburger span:nth-child(3) { top: 18px; }
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 8rem 2rem 4rem;
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 50%, var(--navy-mid) 100%);
+  position: relative; overflow: hidden;
+  color: var(--text-bright);
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -200px; right: -200px;
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 65%);
+  border-radius: 50%;
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: -100px; left: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 60%);
+  border-radius: 50%;
+}
+.hero-inner {
+  max-width: 1200px; margin: 0 auto; width: 100%;
+  display: grid; grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem; align-items: center;
+  position: relative; z-index: 1;
+}
+.hero-text .label {
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.hero-text .label::before {
+  content: ''; width: 2.5rem; height: 1.5px; background: var(--gold);
+}
+.hero-text h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.6rem, 4.5vw, 3.8rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+}
+.hero-text h1 em {
+  font-style: italic; color: var(--gold);
+}
+.hero-text .tagline {
+  font-size: 1.1rem; color: var(--text-light);
+  max-width: 520px; margin-bottom: 2.5rem;
+  line-height: 1.85; font-weight: 300;
+}
+.hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-gold {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.9rem 2.2rem;
+  background: var(--gold);
+  color: var(--navy-deep);
+  text-decoration: none;
+  font-size: 0.85rem; font-weight: 700;
+  letter-spacing: 0.05em;
+  border: none; cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.9rem 2.2rem;
+  background: transparent;
+  color: var(--text-bright);
+  text-decoration: none;
+  font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 0.05em;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+.hero-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  position: relative;
+}
+.hero-card::before {
+  content: ''; position: absolute;
+  top: 0; left: 0; width: 100%; height: 3px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+.hero-card .metric { margin-bottom: 1.5rem; }
+.hero-card .metric:last-child { margin-bottom: 0; }
+.hero-card .metric-value {
+  font-family: var(--serif);
+  font-size: 2.4rem; font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+}
+.hero-card .metric-label {
+  font-size: 0.82rem; color: var(--text-light);
+  margin-top: 0.25rem; font-weight: 400;
+}
+.hero-card .divider {
+  height: 1px; background: rgba(255,255,255,0.06);
+  margin: 1.5rem 0;
+}
+
+/* ─── SECTIONS ─── */
+section { padding: 6rem 2rem; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+
+.section-label {
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.section-label::before {
+  content: ''; width: 1.5rem; height: 1.5px; background: var(--gold);
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+.section-subtitle {
+  font-size: 1.02rem; color: var(--text-muted);
+  max-width: 600px; line-height: 1.85;
+  margin-bottom: 3rem;
+}
+
+/* Dark sections */
+.dark-section {
+  background: var(--navy-deep);
+  color: var(--text-bright);
+}
+.dark-section .section-title { color: var(--text-bright); }
+.dark-section .section-subtitle { color: var(--text-light); }
+
+/* ─── ABOUT ─── */
+#about { background: var(--warm-white); }
+.about-grid {
+  display: grid; grid-template-columns: 2fr 1fr;
+  gap: 4rem; align-items: start;
+}
+.about-text p {
+  color: var(--text-body);
+  margin-bottom: 1.5rem;
+  font-size: 1.02rem;
+  line-height: 1.85;
+}
+.about-text p:first-of-type::first-line {
+  font-weight: 600; color: var(--text-dark);
+}
+.about-aside {
+  padding: 2rem;
+  background: var(--navy-deep);
+  color: var(--text-bright);
+  border-left: 3px solid var(--gold);
+}
+.about-aside h4 {
+  font-family: var(--serif);
+  font-size: 1.25rem; font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: var(--gold);
+}
+.about-aside ul { list-style: none; }
+.about-aside ul li {
+  padding: 0.6rem 0;
+  font-size: 0.92rem; color: var(--text-light);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex; justify-content: space-between;
+}
+.about-aside ul li:last-child { border-bottom: none; }
+.about-aside ul li span {
+  color: rgba(248,246,241,0.5); font-size: 0.85rem;
+}
+
+/* ─── EXPERIENCE ─── */
+#experience { background: var(--cream); }
+.timeline { position: relative; }
+.timeline::before {
+  content: ''; position: absolute;
+  left: 200px; top: 0; bottom: 0;
+  width: 1px; background: var(--border-light);
+}
+.timeline-item {
+  display: grid; grid-template-columns: 200px 1fr;
+  gap: 3rem; padding-bottom: 3rem;
+  position: relative;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-date {
+  text-align: right;
+  padding-right: 2rem;
+  position: relative;
+}
+.timeline-date::after {
+  content: '';
+  position: absolute; right: -5px; top: 8px;
+  width: 9px; height: 9px;
+  background: var(--gold);
+  border-radius: 50%;
+  border: 2px solid var(--cream);
+}
+.timeline-date .year {
+  font-family: var(--serif);
+  font-size: 1.2rem; font-weight: 600;
+  color: var(--navy);
+}
+.timeline-date .period {
+  font-size: 0.8rem; color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+.timeline-content h3 {
+  font-family: var(--serif);
+  font-size: 1.3rem; font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.2rem;
+}
+.timeline-content .company {
+  color: var(--gold); font-weight: 700;
+  font-size: 0.9rem; margin-bottom: 0.15rem;
+  letter-spacing: 0.02em;
+}
+.timeline-content .location {
+  color: var(--text-muted); font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+.timeline-content p {
+  color: var(--text-body); font-size: 0.95rem;
+  line-height: 1.8;
+}
+.timeline-content .highlight {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  background: var(--gold-muted);
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem; font-weight: 600;
+  color: var(--gold);
+  margin-top: 0.75rem;
+  border: 1px solid rgba(201,168,76,0.2);
+}
+
+/* ─── CASE STUDIES ─── */
+#case-studies {
+  background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%);
+  color: var(--text-bright);
+}
+.cases-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+.case-card {
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 2.5rem;
+  background: rgba(255,255,255,0.02);
+  transition: all 0.4s;
+  position: relative; overflow: hidden;
+}
+.case-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s;
+}
+.case-card:hover::before { transform: scaleX(1); }
+.case-card:hover { border-color: rgba(201,168,76,0.3); background: rgba(255,255,255,0.04); }
+.case-card .case-tag {
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.case-card h3 {
+  font-family: var(--serif);
+  font-size: 1.4rem; font-weight: 600;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  color: var(--text-bright);
+}
+.case-card p {
+  color: var(--text-light); font-size: 0.9rem;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+.case-card .case-metrics {
+  display: flex; gap: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.case-metric-value {
+  font-family: var(--serif);
+  font-size: 1.5rem; font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+}
+.case-metric-label {
+  font-size: 0.73rem; color: var(--text-light);
+  margin-top: 0.2rem;
+}
+
+/* ─── FEATURED MEDIA ─── */
+#media { background: var(--warm-white); }
+.media-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+.media-card {
+  background: white;
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.media-card:hover { border-color: var(--gold); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+.media-card .video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0; overflow: hidden;
+  background: var(--navy-deep);
+}
+.media-card .video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+.media-card .media-info {
+  padding: 1.5rem;
+}
+.media-card .media-tag {
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.media-card .media-info h3 {
+  font-family: var(--serif);
+  font-size: 1.15rem; font-weight: 600;
+  color: var(--navy);
+  line-height: 1.35;
+  margin-bottom: 0.4rem;
+}
+.media-card .media-info p {
+  color: var(--text-muted); font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+/* ─── SKILLS ─── */
+#skills { background: var(--cream); }
+.skills-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+}
+.skill-group h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem; font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+}
+.skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.skill-tag {
+  padding: 0.4rem 0.9rem;
+  background: white;
+  border: 1px solid var(--border-light);
+  font-size: 0.84rem; color: var(--text-body);
+  transition: all 0.3s;
+}
+.skill-tag:hover {
+  border-color: var(--gold);
+  color: var(--navy);
+  background: var(--gold-muted);
+}
+
+/* ─── TESTIMONIALS ─── */
+#testimonials {
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color: var(--text-bright);
+}
+.testimonials-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+.testimonial-card {
+  padding: 2.5rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+}
+.testimonial-card::before {
+  content: '\201C';
+  font-family: var(--serif);
+  font-size: 4rem;
+  color: var(--gold);
+  opacity: 0.3;
+  position: absolute;
+  top: 0.8rem; left: 1.5rem;
+  line-height: 1;
+}
+.testimonial-card blockquote {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  position: relative; z-index: 1;
+}
+.testimonial-card .author {
+  font-weight: 600; color: var(--gold);
+  font-size: 0.9rem;
+}
+.testimonial-card .author-role {
+  color: rgba(248,246,241,0.4); font-size: 0.82rem;
+}
+.placeholder-note {
+  text-align: center;
+  color: rgba(248,246,241,0.3);
+  font-size: 0.82rem;
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+/* ─── BLOG ─── */
+#blog { background: var(--warm-white); }
+.blog-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+.blog-card {
+  border: 1px solid var(--border-light);
+  background: white;
+  padding: 2rem;
+  transition: all 0.3s;
+  text-decoration: none; color: inherit;
+  display: block;
+}
+.blog-card:hover { border-color: var(--gold); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
+.blog-card .blog-date {
+  font-size: 0.75rem; color: var(--text-muted);
+  letter-spacing: 0.06em; text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.blog-card h3 {
+  font-family: var(--serif);
+  font-size: 1.3rem; font-weight: 600;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+  color: var(--navy);
+}
+.blog-card p {
+  color: var(--text-body); font-size: 0.9rem;
+  line-height: 1.7;
+}
+.blog-card .read-more {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  margin-top: 1rem;
+  font-size: 0.82rem; font-weight: 600;
+  color: var(--gold);
+}
+
+/* ─── CONTACT ─── */
+#contact {
+  background: var(--navy-deep);
+  color: var(--text-bright);
+}
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.contact-links { display: flex; flex-direction: column; gap: 1rem; }
+.contact-link {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  text-decoration: none; color: var(--text-bright);
+  transition: all 0.3s;
+}
+.contact-link:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: var(--gold);
+}
+.contact-link .contact-icon {
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  background: rgba(201,168,76,0.1);
+  color: var(--gold);
+}
+.contact-label {
+  font-size: 0.72rem; color: rgba(248,246,241,0.35);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 0.15rem;
+}
+.contact-value { font-size: 0.95rem; }
+.contact-message {
+  display: flex; flex-direction: column; justify-content: center;
+}
+.contact-message p {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--navy-deep);
+  border-top: 1px solid rgba(255,255,255,0.04);
+  padding: 2rem;
+  text-align: center;
+}
+footer p {
+  font-size: 0.78rem;
+  color: rgba(248,246,241,0.25);
+  letter-spacing: 0.04em;
+}
+footer a { color: var(--gold); text-decoration: none; }
+
+/* ─── ANIMATIONS ─── */
+.fade-up {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero-card { max-width: 100%; }
+  .about-grid { grid-template-columns: 1fr; }
+  .timeline::before { left: 0; }
+  .timeline-item { grid-template-columns: 1fr; gap: 0; padding-left: 2rem; }
+  .timeline-date { text-align: left; padding-right: 0; margin-bottom: 0.5rem; }
+  .timeline-date::after { left: -2rem; right: auto; top: 6px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-message { order: -1; margin-bottom: 1rem; }
+}
+@media (max-width: 640px) {
+  nav ul { display: none; }
+  .hamburger { display: block; }
+  nav ul.open {
+    display: flex; flex-direction: column;
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--navy-deep);
+    justify-content: center; align-items: center;
+    gap: 2.5rem; z-index: 150;
+  }
+  nav ul.open a { font-size: 1.1rem; color: var(--text-bright); }
+  section { padding: 4rem 1.25rem; }
+  .cases-grid, .testimonials-grid, .blog-grid, .media-grid { grid-template-columns: 1fr; }
+  .case-card .case-metrics { flex-direction: column; gap: 1rem; }
+  .hero { padding: 6rem 1.25rem 3rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">Varun<span>.</span>Patel</a>
+    <button class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul>
+      <li><a href="#about" onclick="document.querySelector('nav ul').classList.remove('open')">About</a></li>
+      <li><a href="#experience" onclick="document.querySelector('nav ul').classList.remove('open')">Experience</a></li>
+      <li><a href="#case-studies" onclick="document.querySelector('nav ul').classList.remove('open')">Case Studies</a></li>
+      <li><a href="#media" onclick="document.querySelector('nav ul').classList.remove('open')">Media</a></li>
+      <li><a href="#skills" onclick="document.querySelector('nav ul').classList.remove('open')">Skills</a></li>
+      <li><a href="#blog" onclick="document.querySelector('nav ul').classList.remove('open')">Blog</a></li>
+      <li><a href="#contact" onclick="document.querySelector('nav ul').classList.remove('open')">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="label">Product Leader</div>
+      <h1>Turning complex <em>technology</em> into products enterprises rely&nbsp;on.</h1>
+      <p class="tagline">14+ years building connectivity and IoT platforms across Africa, Asia, and Europe. From carrier-grade networks to global SaaS — I bridge deep technical understanding with strategic product thinking.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-gold">Get In Touch &rarr;</a>
+        <a href="#case-studies" class="btn-outline">View Case Studies</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="metric">
+          <div class="metric-value">14+</div>
+          <div class="metric-label">Years in Connectivity & Tech</div>
+        </div>
+        <div class="divider"></div>
+        <div class="metric">
+          <div class="metric-value">€1M+</div>
+          <div class="metric-label">ARR contributed through MNO enablement</div>
+        </div>
+        <div class="divider"></div>
+        <div class="metric">
+          <div class="metric-value">6</div>
+          <div class="metric-label">Countries — pilot to enterprise sale</div>
+        </div>
+        <div class="divider"></div>
+        <div class="metric">
+          <div class="metric-value">1</div>
+          <div class="metric-label">Patent Holder (IoT Smart Padlock)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label">About</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title">Building at the intersection of technology & strategy.</h2>
+        <p>I've spent my career in connectivity and technology — from deploying carrier-grade networks across Africa to leading product strategy for global IoT, satellite, and cloud platforms. What drives me is translating hard engineering realities into clear product visions that teams can rally behind.</p>
+        <p>At emnify, I own product strategy and roadmap for satellite connectivity, MVNO/MVNE PaaS, and eSIM enablement — presenting directly to C-level stakeholders. I've enabled MNOs onto the platform contributing over €1M in ARR, launched 5G NSA capabilities, and brought satellite IoT connectivity to Brazil — opening deployments in previously unreachable environments.</p>
+        <p>Before that, I joined Willowmore as the first product employee and co-invented a patented IoT smart padlock. I took the product from concept through pilots across six countries to the company's first enterprise sale — a seven-figure deal with no prior customer references.</p>
+        <p>I'm now looking to step into a Director of Product role where I can lead and grow PM teams, set product strategy at a broader organizational level, and build platforms that create lasting competitive advantage.</p>
+      </div>
+      <div class="about-aside">
+        <h4>Quick Facts</h4>
+        <ul>
+          <li>Based in <span>Lindau, Germany</span></li>
+          <li>Education <span>MBA, SP Jain Global</span></li>
+          <li>Engineering <span>B.E., VTU India</span></li>
+          <li>Languages <span>EN · HI · DE</span></li>
+          <li>Patent <span>SG 10201708266U</span></li>
+          <li>Award <span>emnify Innovation 2024</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-label">Experience</div>
+    <h2 class="section-title">A career built across continents.</h2>
+    <p class="section-subtitle">From engineering networks in East Africa to shaping product strategy in Europe — each chapter added a new dimension to how I build products.</p>
+    <div class="timeline">
+      <div class="timeline-item fade-up">
+        <div class="timeline-date"><div class="year">2025 — Now</div><div class="period">Germany</div></div>
+        <div class="timeline-content">
+          <h3>Staff Product Manager</h3>
+          <div class="company">emnify</div>
+          <div class="location">IoT Connectivity Platform · Germany</div>
+          <p>Own product strategy for satellite connectivity, MVNO/MVNE PaaS, and operator eSIM enablement with direct C-level roadmap communication. Lead cross-functional alignment across 11 engineers and 2 engineering managers. Define pricing strategy and drive market analysis to shape platform differentiation.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-date"><div class="year">2023 — 2025</div><div class="period">Germany</div></div>
+        <div class="timeline-content">
+          <h3>Senior Product Manager</h3>
+          <div class="company">emnify</div>
+          <div class="location">IoT Connectivity Platform · Germany</div>
+          <p>Enabled 2 MNOs on the platform contributing €1M+ in ARR. Led market entry and enterprise onboarding in Brazil, establishing a repeatable regional launch model. Rolled out next-generation packet gateways for platform scalability.</p>
+          <div class="highlight">&#9733; emnify Innovation Award — 2024</div>
+        </div>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-date"><div class="year">2021 — 2023</div><div class="period">Germany</div></div>
+        <div class="timeline-content">
+          <h3>Product Manager, Core Networks</h3>
+          <div class="company">emnify</div>
+          <div class="location">IoT Connectivity Platform · Germany</div>
+          <p>Led development and launch of 5G non-standalone cloud core network capabilities. Owned roadmap definition informed by market, technology, and competitive analysis. Drove product discovery through customer interviews and problem validation.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-date"><div class="year">2019 — 2021</div><div class="period">Germany</div></div>
+        <div class="timeline-content">
+          <h3>Product Manager</h3>
+          <div class="company">LYNX Technik AG</div>
+          <div class="location">Broadcast Technology · Weiterstadt, Germany</div>
+          <p>Led 0-to-1 launch of a real-time HDR-to-SDR video converter — enabling SDR broadcast infrastructure to render HDR content without hardware replacement. Owned full product lifecycle from market research through GTM strategy. Won NAB Product of the Year and IBC Best of Show awards.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-date"><div class="year">2016 — 2019</div><div class="period">Singapore</div></div>
+        <div class="timeline-content">
+          <h3>IoT Product Manager</h3>
+          <div class="company">Willowmore Pvt. Ltd.</div>
+          <div class="location">IoT & Smart Hardware · Singapore</div>
+          <p>Co-invented a patented IoT smart padlock (SG Patent No. 10201708266U). Closed the company's first enterprise sale — a seven-figure (SGD) deal with zero prior references. Ran pilot programs across 6 markets.</p>
+          <div class="highlight">&#128218; Patent Holder · First Enterprise Sale</div>
+        </div>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-date"><div class="year">2011 — 2015</div><div class="period">Kenya</div></div>
+        <div class="timeline-content">
+          <h3>Wireless Engineer</h3>
+          <div class="company">Huawei Technologies</div>
+          <div class="location">Telecom Infrastructure · Nairobi, Kenya</div>
+          <p>Led the first commercial 4G network deployment in Madagascar. Delivered large-scale 2G, 3G, and LTE rollouts across Kenya, Zambia, South Africa, Madagascar, Mauritius, and DRC Congo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="case-studies" class="dark-section">
+  <div class="section-inner">
+    <div class="section-label">Case Studies</div>
+    <h2 class="section-title">Products that created real impact.</h2>
+    <p class="section-subtitle">From zero-to-one hardware products to scaling global connectivity platforms — here are the stories behind the work.</p>
+    <div class="cases-grid">
+      <div class="case-card fade-up">
+        <div class="case-tag">Satellite IoT · emnify</div>
+        <h3>Bringing Satellite IoT Connectivity to Brazil</h3>
+        <p>Delivered NB-IoT connectivity via Skylo's satellite network in Brazil, enabling enterprise IoT deployments in remote environments with no terrestrial coverage. Defined pricing strategy and go-to-market for an entirely new connectivity category.</p>
+        <div class="case-metrics">
+          <div><div class="case-metric-value">New</div><div class="case-metric-label">Market Category</div></div>
+          <div><div class="case-metric-value">Brazil</div><div class="case-metric-label">First Market</div></div>
+        </div>
+      </div>
+      <div class="case-card fade-up stagger-1">
+        <div class="case-tag">Platform Growth · emnify</div>
+        <h3>Enabling MNOs on a Global IoT PaaS</h3>
+        <p>Led the technical and commercial onboarding of 2 mobile network operators onto the emnify platform as MVNE customers, unlocking a new revenue stream and validating the PaaS model at scale.</p>
+        <div class="case-metrics">
+          <div><div class="case-metric-value">€1M+</div><div class="case-metric-label">ARR Contributed</div></div>
+          <div><div class="case-metric-value">2</div><div class="case-metric-label">MNOs Enabled</div></div>
+        </div>
+      </div>
+      <div class="case-card fade-up stagger-2">
+        <div class="case-tag">0-to-1 · Willowmore</div>
+        <h3>Patented IoT Smart Padlock — Concept to Enterprise Sale</h3>
+        <p>Co-invented and brought to market a BLE + cellular IoT smart padlock. Ran pilot programs in 6 countries and closed a seven-figure enterprise deal in Indonesia with zero prior customer references.</p>
+        <div class="case-metrics">
+          <div><div class="case-metric-value">7-fig</div><div class="case-metric-label">First Enterprise Deal</div></div>
+          <div><div class="case-metric-value">6</div><div class="case-metric-label">Pilot Markets</div></div>
+        </div>
+      </div>
+      <div class="case-card fade-up stagger-3">
+        <div class="case-tag">Broadcast Tech · LYNX Technik</div>
+        <h3>HDR-to-SDR Real-Time Video Converter</h3>
+        <p>Led the 0-to-1 development of a converter enabling legacy SDR broadcast infrastructure to render HDR content. Won NAB Product of the Year Award and IBC Best of Show — the only solution offering frame-by-frame dynamic tone mapping in real time.</p>
+        <div class="case-metrics">
+          <div><div class="case-metric-value">0 → 1</div><div class="case-metric-label">Product Launch</div></div>
+          <div><div class="case-metric-value">2</div><div class="case-metric-label">Industry Awards</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED MEDIA -->
+<section id="media">
+  <div class="section-inner">
+    <div class="section-label">Featured Media</div>
+    <h2 class="section-title">Interviews & product demos.</h2>
+    <p class="section-subtitle">Conversations about the products I've built and the thinking behind them — including interviews and live product demonstrations from LYNX Technik.</p>
+    <div class="media-grid">
+      <div class="media-card fade-up">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/mbEP8TE-C40" title="Introduction to HDR Evie" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="media-info">
+          <div class="media-tag">Product Introduction · LYNX Technik AG</div>
+          <h3>Introduction to HDR Evie</h3>
+          <p>Introduction to the world's first real-time, frame-by-frame, dynamic HDR to SDR converter.</p>
+        </div>
+      </div>
+      <div class="media-card fade-up stagger-1">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/aN0B1RebkNg" title="LYNX TECHNIK AG announces 8k fiber products and celebrates 100,000 yellobrik units sold" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="media-info">
+          <div class="media-tag">Interview · IBC 2019, Amsterdam</div>
+          <h3>LYNX Technik at IBC 2019 — 8K Fiber Products & 100K Yellobrik Milestone</h3>
+          <p>Product Manager Varun Patel introduces new 8K fiber products and demonstrates HDR Evie & HDR Evie+ real-time converters at IBC 2019.</p>
+        </div>
+      </div>
+      <div class="media-card fade-up stagger-2">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/SpGOI42jz78" title="HDR Evie - The WORLD'S FIRST Automated Frame-by-Frame HDR to SDR Conversion Solution" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="media-info">
+          <div class="media-tag">Product Demo · NAB 2019</div>
+          <h3>HDR Evie — The World's First Automated "Frame-by-Frame" HDR to SDR Conversion</h3>
+          <p>Varun Patel, LYNX Technik Product Manager, highlights the new innovations on show at NAB 2019.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-label">Skills & Tools</div>
+    <h2 class="section-title">What I work with.</h2>
+    <p class="section-subtitle">A blend of strategic, technical, and operational skills shaped by years of building products across hardware, software, and connectivity platforms.</p>
+    <div class="skills-grid">
+      <div class="skill-group fade-up">
+        <h3>Product Strategy</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Product Roadmapping</span>
+          <span class="skill-tag">Product Vision</span>
+          <span class="skill-tag">Market Analysis</span>
+          <span class="skill-tag">Competitive Research</span>
+          <span class="skill-tag">Pricing Strategy</span>
+          <span class="skill-tag">Go-to-Market</span>
+          <span class="skill-tag">Business Case Development</span>
+          <span class="skill-tag">Portfolio Management</span>
+        </div>
+      </div>
+      <div class="skill-group fade-up stagger-1">
+        <h3>Execution & Delivery</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Agile / Scrum</span>
+          <span class="skill-tag">Cross-functional Leadership</span>
+          <span class="skill-tag">Stakeholder Management</span>
+          <span class="skill-tag">Customer Discovery</span>
+          <span class="skill-tag">Backlog Prioritization</span>
+          <span class="skill-tag">OKRs & KPIs</span>
+          <span class="skill-tag">Product Discovery</span>
+        </div>
+      </div>
+      <div class="skill-group fade-up stagger-2">
+        <h3>Domain Expertise</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">IoT Platforms</span>
+          <span class="skill-tag">Satellite Connectivity</span>
+          <span class="skill-tag">eSIM / eUICC</span>
+          <span class="skill-tag">MVNO / MVNE</span>
+          <span class="skill-tag">5G / LTE</span>
+          <span class="skill-tag">Cloud Core Networks</span>
+          <span class="skill-tag">SaaS / PaaS</span>
+          <span class="skill-tag">Broadcast Technology</span>
+        </div>
+      </div>
+      <div class="skill-group fade-up stagger-3">
+        <h3>Tools</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Jira</span>
+          <span class="skill-tag">Confluence</span>
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Miro</span>
+          <span class="skill-tag">Amplitude</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Notion</span>
+          <span class="skill-tag">Google Analytics</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="dark-section">
+  <div class="section-inner">
+    <div class="section-label">Testimonials</div>
+    <h2 class="section-title">What colleagues say.</h2>
+    <p class="section-subtitle">Perspectives from people I've worked closely with across different roles and organizations.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-up">
+        <blockquote>"Varun has a rare ability to sit at the intersection of deep technical complexity and strategic product thinking. He doesn't just manage products — he shapes them with conviction and clarity."</blockquote>
+        <div class="author">Engineering Leader</div>
+        <div class="author-role">emnify</div>
+      </div>
+      <div class="testimonial-card fade-up stagger-1">
+        <blockquote>"From concept to a seven-figure enterprise sale with no prior references — Varun turned an idea into a business. His ability to run pilots across six countries and close deals was remarkable."</blockquote>
+        <div class="author">Co-Founder</div>
+        <div class="author-role">Willowmore</div>
+      </div>
+      <div class="testimonial-card fade-up stagger-2">
+        <blockquote>"Varun brings a global perspective that most PMs simply don't have. His experience deploying networks across Africa gives him a grounded understanding of what it takes to ship in challenging environments."</blockquote>
+        <div class="author">Product Director</div>
+        <div class="author-role">Former Colleague</div>
+      </div>
+    </div>
+    <p class="placeholder-note">* Placeholder testimonials — replace with real endorsements from colleagues and stakeholders.</p>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="section-inner">
+    <div class="section-label">Writing</div>
+    <h2 class="section-title">Thoughts on product & technology.</h2>
+    <p class="section-subtitle">Occasional reflections on product management, connectivity, and building in complex technology domains.</p>
+    <div class="blog-grid">
+      <a href="#" class="blog-card fade-up">
+        <div class="blog-date">Coming Soon</div>
+        <h3>What Satellite IoT Taught Me About Product-Market Fit</h3>
+        <p>Launching a new connectivity category in Brazil — and the unexpected lessons about finding fit in emerging markets.</p>
+        <div class="read-more">Read &rarr;</div>
+      </a>
+      <a href="#" class="blog-card fade-up stagger-1">
+        <div class="blog-date">Coming Soon</div>
+        <h3>From Engineer to Product Leader: The Skills That Transfer</h3>
+        <p>Reflections on transitioning from network engineering in Africa to product management in Europe.</p>
+        <div class="read-more">Read &rarr;</div>
+      </a>
+      <a href="#" class="blog-card fade-up stagger-2">
+        <div class="blog-date">Coming Soon</div>
+        <h3>Selling a Product That Doesn't Exist Yet</h3>
+        <p>How we closed a seven-figure deal for a patented IoT padlock with no prior customers.</p>
+        <div class="read-more">Read &rarr;</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Let's connect.</h2>
+    <p class="section-subtitle" style="color: var(--text-light);">Whether you're building something in connected technology, enterprise SaaS, or platform ecosystems — I'd love to hear from you.</p>
+    <div class="contact-grid">
+      <div class="contact-links">
+        <a href="mailto:mailvarunpatel@gmail.com" class="contact-link">
+          <div class="contact-icon">&#9993;</div>
+          <div><div class="contact-label">Email</div><div class="contact-value">mailvarunpatel@gmail.com</div></div>
+        </a>
+        <a href="https://www.linkedin.com/in/varun-patel-sg" target="_blank" class="contact-link">
+          <div class="contact-icon">&#128279;</div>
+          <div><div class="contact-label">LinkedIn</div><div class="contact-value">linkedin.com/in/varun-patel-sg</div></div>
+        </a>
+        <a href="tel:+491788459011" class="contact-link">
+          <div class="contact-icon">&#128222;</div>
+          <div><div class="contact-label">Phone</div><div class="contact-value">+49 178 845 9011</div></div>
+        </a>
+        <div class="contact-link" style="cursor: default;">
+          <div class="contact-icon">&#127760;</div>
+          <div><div class="contact-label">Location</div><div class="contact-value">Lindau, Bavaria, Germany</div></div>
+        </div>
+      </div>
+      <div class="contact-message">
+        <p>"What drives me is building platforms that create lasting competitive advantage — and working with teams who share that ambition."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 Varun Patel. All rights reserved. &nbsp;·&nbsp; <a href="https://countrep.com">countrep.com</a></p>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Nav auto-hide on scroll
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  const cur = window.pageYOffset;
+  nav.style.transform = (cur > lastScroll && cur > 100) ? 'translateY(-100%)' : 'translateY(0)';
+  lastScroll = cur;
+});
+</script>
+
+</body>
+</html>
