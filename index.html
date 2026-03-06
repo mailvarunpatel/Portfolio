@@ -708,6 +708,74 @@ footer a { color: var(--gold); text-decoration: none; }
   line-height: 1.6;
 }
 
+/* ─── FLOATING CTA ─── */
+.floating-cta {
+  position: fixed;
+  bottom: 2rem; right: 2rem;
+  z-index: 90;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+.floating-cta.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+.floating-cta a {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--gold);
+  color: var(--navy-deep);
+  text-decoration: none;
+  font-size: 0.82rem; font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: all 0.3s;
+}
+.floating-cta a:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+}
+
+/* ─── EXPANDED CASE STUDIES ─── */
+.case-card .case-structure {
+  margin-bottom: 1.25rem;
+}
+.case-card .case-step {
+  margin-bottom: 0.75rem;
+}
+.case-card .case-step:last-child { margin-bottom: 0; }
+.case-card .case-step-label {
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.15rem;
+}
+.case-card .case-step-text {
+  font-size: 0.9rem; color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ─── RESUME DOWNLOAD ─── */
+.resume-download {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.8rem; font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: all 0.3s;
+}
+.resume-download:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
 /* ─── ANIMATIONS ─── */
 .fade-up {
   opacity: 0; transform: translateY(30px);
@@ -780,6 +848,7 @@ footer a { color: var(--gold); text-decoration: none; }
       <div class="hero-cta">
         <a href="#contact" class="btn-gold">Get In Touch &rarr;</a>
         <a href="#case-studies" class="btn-outline">View Case Studies</a>
+        <a href="Varun_Patel_Resume.pdf" target="_blank" class="btn-outline" style="border-color: rgba(201,168,76,0.3); color: var(--gold);">&#8615; Download Resume</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -921,7 +990,20 @@ footer a { color: var(--gold); text-decoration: none; }
       <div class="case-card fade-up">
         <div class="case-tag">Satellite IoT · emnify</div>
         <h3>Bringing Satellite IoT Connectivity to Brazil</h3>
-        <p>Delivered NB-IoT connectivity via Skylo's satellite network in Brazil, enabling enterprise IoT deployments in remote environments with no terrestrial coverage. Defined pricing strategy and go-to-market for an entirely new connectivity category.</p>
+        <div class="case-structure">
+          <div class="case-step">
+            <div class="case-step-label">Challenge</div>
+            <div class="case-step-text">Enterprise IoT customers in Brazil needed connectivity in remote areas with zero terrestrial coverage — a gap no existing solution could fill.</div>
+          </div>
+          <div class="case-step">
+            <div class="case-step-label">Approach</div>
+            <div class="case-step-text">Partnered with Skylo to deliver NB-IoT via satellite. Defined the pricing strategy and go-to-market for an entirely new connectivity category on the emnify platform.</div>
+          </div>
+          <div class="case-step">
+            <div class="case-step-label">Result</div>
+            <div class="case-step-text">Launched satellite IoT connectivity in Brazil — enabling enterprise deployments in previously unreachable environments and opening a new market category.</div>
+          </div>
+        </div>
         <div class="case-metrics">
           <div><div class="case-metric-value">New</div><div class="case-metric-label">Market Category</div></div>
           <div><div class="case-metric-value">Brazil</div><div class="case-metric-label">First Market</div></div>
@@ -930,7 +1012,20 @@ footer a { color: var(--gold); text-decoration: none; }
       <div class="case-card fade-up stagger-1">
         <div class="case-tag">Platform Growth · emnify</div>
         <h3>Enabling MNOs on a Global IoT PaaS</h3>
-        <p>Led the technical and commercial onboarding of 2 mobile network operators onto the emnify platform as MVNE customers, unlocking a new revenue stream and validating the PaaS model at scale.</p>
+        <div class="case-structure">
+          <div class="case-step">
+            <div class="case-step-label">Challenge</div>
+            <div class="case-step-text">emnify needed to validate its MVNE/PaaS model by onboarding mobile network operators — requiring deep technical integration and commercial alignment.</div>
+          </div>
+          <div class="case-step">
+            <div class="case-step-label">Approach</div>
+            <div class="case-step-text">Led end-to-end technical and commercial onboarding of 2 MNOs. Drove cross-functional alignment and established a repeatable regional launch model starting with Brazil.</div>
+          </div>
+          <div class="case-step">
+            <div class="case-step-label">Result</div>
+            <div class="case-step-text">Contributed €1M+ in ARR, validated the PaaS model at scale, and created a blueprint for future operator onboarding.</div>
+          </div>
+        </div>
         <div class="case-metrics">
           <div><div class="case-metric-value">€1M+</div><div class="case-metric-label">ARR Contributed</div></div>
           <div><div class="case-metric-value">2</div><div class="case-metric-label">MNOs Enabled</div></div>
@@ -939,7 +1034,20 @@ footer a { color: var(--gold); text-decoration: none; }
       <div class="case-card fade-up stagger-2">
         <div class="case-tag">0-to-1 · Hardware + Software · Willowmore</div>
         <h3>Patented IoT Smart Padlock — Concept to Enterprise Sale</h3>
-        <p>Co-invented and brought to market a BLE + cellular IoT smart padlock. Managed OEM hardware and software partners in China, defined UX for web and mobile applications, ran pilot programs across 6 countries, and closed a seven-figure enterprise deal in Indonesia with zero prior customer references.</p>
+        <div class="case-structure">
+          <div class="case-step">
+            <div class="case-step-label">Challenge</div>
+            <div class="case-step-text">Build an IoT-connected smart padlock from scratch as the company's first product employee — with no existing product, no customers, and no reference deployments.</div>
+          </div>
+          <div class="case-step">
+            <div class="case-step-label">Approach</div>
+            <div class="case-step-text">Co-invented the BLE + cellular padlock (now patented). Managed OEM hardware and software partners in China, defined UX for web and mobile apps, and ran pilot programs across 6 countries.</div>
+          </div>
+          <div class="case-step">
+            <div class="case-step-label">Result</div>
+            <div class="case-step-text">Closed the company's first enterprise sale — a seven-figure (SGD) deal in Indonesia with zero prior customer references. Secured patent SG 10201708266U.</div>
+          </div>
+        </div>
         <div class="case-metrics">
           <div><div class="case-metric-value">7-fig</div><div class="case-metric-label">First Enterprise Deal</div></div>
           <div><div class="case-metric-value">6</div><div class="case-metric-label">Pilot Markets</div></div>
@@ -948,7 +1056,20 @@ footer a { color: var(--gold); text-decoration: none; }
       <div class="case-card fade-up stagger-3">
         <div class="case-tag">Broadcast Tech · LYNX Technik · World's First</div>
         <h3>World's First Real-Time "Frame-by-Frame" HDR to SDR Converter</h3>
-        <p>Led the 0-to-1 development of HDR Evie — the world's first automated, frame-by-frame dynamic HDR to SDR converter. Managed the full hardware-software lifecycle from market research and requirements through firmware partner coordination, manufacturing handoff, and GTM. Won NAB Product of the Year and IBC Best of Show awards.</p>
+        <div class="case-structure">
+          <div class="case-step">
+            <div class="case-step-label">Challenge</div>
+            <div class="case-step-text">Broadcasters needed real-time HDR to SDR conversion for live events — but existing solutions used static corrections that failed in unpredictable lighting conditions.</div>
+          </div>
+          <div class="case-step">
+            <div class="case-step-label">Approach</div>
+            <div class="case-step-text">Led 0-to-1 development of HDR Evie — managing the full hardware-software lifecycle from market research and requirements through firmware partner coordination, manufacturing handoff, and GTM strategy.</div>
+          </div>
+          <div class="case-step">
+            <div class="case-step-label">Result</div>
+            <div class="case-step-text">Launched the world's first automated frame-by-frame dynamic HDR to SDR converter. Won both the NAB Product of the Year Award and IBC Best of Show.</div>
+          </div>
+        </div>
         <div class="case-metrics">
           <div><div class="case-metric-value">0 → 1</div><div class="case-metric-label">Product Launch</div></div>
           <div><div class="case-metric-value">2</div><div class="case-metric-label">Industry Awards</div></div>
@@ -1125,10 +1246,11 @@ footer a { color: var(--gold); text-decoration: none; }
           <span class="skill-tag">Confluence</span>
           <span class="skill-tag">Figma</span>
           <span class="skill-tag">Miro</span>
-          <span class="skill-tag">Amplitude</span>
+          <span class="skill-tag">Dovetail</span>
           <span class="skill-tag">SQL</span>
-          <span class="skill-tag">Notion</span>
-          <span class="skill-tag">Google Analytics</span>
+          <span class="skill-tag">Superset</span>
+          <span class="skill-tag">Periscope</span>
+          <span class="skill-tag">Lucidchart</span>
         </div>
       </div>
     </div>
@@ -1223,6 +1345,11 @@ footer a { color: var(--gold); text-decoration: none; }
   </div>
 </section>
 
+<!-- FLOATING CTA -->
+<div class="floating-cta" id="floatingCta">
+  <a href="#contact">Get In Touch &rarr;</a>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <p>&copy; 2025 Varun Patel. All rights reserved. &nbsp;·&nbsp; <a href="https://buildwithvarun.com">buildwithvarun.com</a></p>
@@ -1238,13 +1365,30 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-// Nav auto-hide on scroll
+// Nav auto-hide on scroll + floating CTA
 let lastScroll = 0;
+const floatingCta = document.getElementById('floatingCta');
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
   const cur = window.pageYOffset;
   nav.style.transform = (cur > lastScroll && cur > 100) ? 'translateY(-100%)' : 'translateY(0)';
   lastScroll = cur;
+  
+  // Show floating CTA after scrolling past hero
+  if (cur > window.innerHeight * 0.8) {
+    floatingCta.classList.add('visible');
+  } else {
+    floatingCta.classList.remove('visible');
+  }
+  
+  // Hide floating CTA when near contact section
+  const contact = document.getElementById('contact');
+  if (contact) {
+    const contactTop = contact.getBoundingClientRect().top;
+    if (contactTop < window.innerHeight) {
+      floatingCta.classList.remove('visible');
+    }
+  }
 });
 </script>
 
